@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import {HomeIcon} from '../assets/icons/BTicons'
+
 
 const Products = () => {
   return (
     <View style={styles.container}>
       <Text>Products</Text>
+      <HomeIcon width={100} height={50} fill="#0C7DBF"/>
+      
     </View>
   )
 }
@@ -16,6 +20,6 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'#fff'
+        backgroundColor:'#D9D9D9'
     }
 })

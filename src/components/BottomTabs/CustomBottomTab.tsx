@@ -1,4 +1,4 @@
-import React, {FC, useMemo, useState} from 'react';
+import React, {FC} from 'react';
 import {StyleSheet, View} from 'react-native';
 
 import Animated, {
@@ -26,7 +26,18 @@ export const CustomBottomTab: FC<BottomTabBarProps> = ({
   descriptors,
   navigation,
 }) => {
+
+    // console.log ({state,
+    //     descriptors,
+    //     navigation});
+
+    // console.log(JSON.stringify(state, null, 2));
+    //  console.log(JSON.stringify( descriptors, null, 2));
+
+
   const {containerPath, curvedPaths, tHeight} = usePath();
+// console.log({containerPath, curvedPaths, tHeight});
+
   const circleXCoordinate = useSharedValue(0);
   const progress = useSharedValue(1);
   const handleMoveCircle = (currentPath: string) => {
@@ -41,11 +52,13 @@ export const CustomBottomTab: FC<BottomTabBarProps> = ({
       case 'Favourites':
         return 'star';
       case 'Profile':
-        return 'user';
+        return 'users';
       default:
         return 'home';
     }
+    
   };
+
   const animatedProps = useAnimatedProps(() => {
     const currentPath = interpolatePath(
       progress.value,
@@ -66,7 +79,7 @@ export const CustomBottomTab: FC<BottomTabBarProps> = ({
   return (
     <View style={styles.tabBarContainer}>
       <Svg width={SCREEN_WIDTH} height={tHeight} style={styles.shadowMd}>
-        <AnimatedPath fill={'white'} animatedProps={animatedProps} />
+        <AnimatedPath fill={'#000000'} animatedProps={animatedProps} />
       </Svg>
       <AnimatedCircle circleX={circleXCoordinate} />
       <View
@@ -93,8 +106,9 @@ export const CustomBottomTab: FC<BottomTabBarProps> = ({
       </View>
     </View>
   );
+  
 };
-// export default CustomBottomTab;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -112,7 +126,7 @@ const styles = StyleSheet.create({
   },
   shadowMd: {
     elevation: 3,
-    shadowColor: '#000',
+    shadowColor: '#000000',
     shadowOpacity: 0.2,
     shadowRadius: 3,
     shadowOffset: {width: 0, height: 3},

@@ -1,4 +1,4 @@
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text} from 'react-native';
 import React, {FC, useEffect} from 'react';
 import Animated, {
   useAnimatedProps,
@@ -28,6 +28,8 @@ const TabItem: FC<TabProps> = ({
   activeIndex,
   onTabPress,
 }) => {
+    // console.log({label,icon,index});
+
   const {curvedPaths} = usePath();
   const animatedActiveIndex = useSharedValue(activeIndex);
   const iconPosition = getPathXCenterByIndex(curvedPaths, index);
@@ -93,7 +95,10 @@ const TabItem: FC<TabProps> = ({
   );
 };
 
+
+
 export default TabItem;
+
 
 const styles = StyleSheet.create({
   labelContainer: {
