@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-import {HomeIcon} from '../assets/icons/BTicons'
+import Feather from 'react-native-vector-icons/Feather';
 
 
 const Products = () => {
   return (
     <View style={styles.container}>
-      <Text>Products</Text>
-      <HomeIcon width={100} height={50} fill="#0C7DBF"/>
+      
+      <Feather name="home" size={64} />
+      <Text>Products Home</Text>
       
     </View>
   )

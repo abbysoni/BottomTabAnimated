@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import Feather from 'react-native-vector-icons/Feather';
 
 const Favourites = () => {
   return (
     <View style={styles.container}>
-      <Text>Fav</Text>
+      <Feather name="heart" size={64} />
+      <Text>Favourites</Text>
     </View>
   )
 }

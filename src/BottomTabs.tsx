@@ -11,7 +11,7 @@ export default function BottomTabs()
 {
     return (
         <Tab.Navigator
-         tabBar={(props) => <CustomBottomTab{...props}/>}
+         tabBar={props => <CustomBottomTab{...props}/>}
          >
             <Tab.Group
             screenOptions={{
