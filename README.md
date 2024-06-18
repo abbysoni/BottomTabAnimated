@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+Check the demo of this code on output tab :https://github.com/abbysoni/BottomTabAnimated/blob/main/Output/AnimatedBT.mp4
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
